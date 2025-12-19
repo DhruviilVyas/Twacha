@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
-
+import Image from 'next/image';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,10 +23,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Treatments', href: '#treatments' },
-    { name: 'Doctors', href: '#doctors' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Treatments', href: '#specialized-care' },
+    { name: 'About', href: 'about' },
   ];
 
   return (
@@ -39,9 +37,36 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-serif font-bold text-stone-800">
-              Twacha<span className="text-emerald-600">Clinic</span>
-            </Link>
+            <div className="flex items-center shrink-0">
+        {" "}
+        <Link href="/" className="flex items-center gap-3">
+          {" "}
+        
+          <Image
+            src="/logo.png"
+            alt="Twacha Logo"
+            className="h-10 w-10 object-contain rounded-full border border-gray-100 shadow-sm"
+     height={30}
+                  width={30}
+/>
+        </Link>{" "}
+      </div> <Link href="/" className="flex items-baseline gap-1.5 group">
+  {/* 'Twacha' in Dark Coffee Brown with the decorative font */}
+  <span 
+    className="text-3xl font-bold text-[#4A332A]" 
+    style={{ fontFamily: "'Cinzel', serif" }} // Inline style to ensure the font applies
+  >
+    Twacha
+  </span>
+
+  {/* 'Skin Clinic' in Muted Gold with a clean font */}
+  <span 
+    className="text-lg font-medium text-[#B59459] uppercase tracking-wider"
+    style={{ fontFamily: "'Lato', sans-serif" }}
+  >
+    Skin Clinic
+  </span>
+</Link>
           </div>
 
           {/* Desktop Menu */}
@@ -50,22 +75,24 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-stone-600 hover:text-emerald-600 font-medium transition-colors"
+                className="text-stone-600 hover:tetext-[#B59459] font-medium transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-            <button className="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition-colors shadow-sm flex items-center gap-2">
+            <Link href={"https://kivihealth.com/iam/dixit.chaudhari.9bbhbbf5rxsy/bookslot"}>
+            <button className="bg-[#4A332A] text-white px-5 py-2 rounded-full hover:text-[#B59459] transition-colors shadow-sm flex items-center gap-2">
               <Phone size={18} />
-              <span>Book Appointment</span>
+              <span >Book Appointment</span>
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-stone-600 hover:text-emerald-600 focus:outline-none"
+              className="text-stone-600 hover:tetext-[#B59459] focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -82,17 +109,19 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-stone-600 hover:text-emerald-600 hover:bg-stone-100 rounded-md text-lg font-medium"
+                className="block px-3 py-2 text-stone-600 hover:text-[#B59459] hover:bg-stone-100 rounded-md text-lg font-medium"
               >
                 {link.name}
               </Link>
             ))}
+            <Link href={"https://kivihealth.com/iam/dixit.chaudhari.9bbhbbf5rxsy/bookslot"}>
             <div className="mt-4">
-              <button className="w-full bg-emerald-600 text-white px-5 py-3 rounded-md hover:bg-emerald-700 transition-colors flex justify-center items-center gap-2">
+              <button className="w-full text-[#B59459] text-white px-5 py-3 rounded-md hover:text-[#B59459] transition-colors flex justify-center items-center gap-2">
                 <Phone size={18} />
                 Book Appointment
               </button>
             </div>
+            </Link>
           </div>
         </div>
       )}

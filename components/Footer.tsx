@@ -10,22 +10,36 @@ const Footer = () => {
           
           {/* Column 1: Brand Info */}
           <div>
-            <h3 className="text-2xl font-serif font-bold text-stone-800 mb-4">
-              Twacha<span className="text-emerald-600">Clinic</span>
-            </h3>
+           <Link href="/" className="flex items-baseline gap-1.5 group">
+  {/* 'Twacha' in Dark Coffee Brown with the decorative font */}
+  <span 
+    className="text-3xl font-bold text-[#4A332A]" 
+    style={{ fontFamily: "'Cinzel', serif" }} // Inline style to ensure the font applies
+  >
+    Twacha
+  </span>
+
+  {/* 'Skin Clinic' in Muted Gold with a clean font */}
+  <span 
+    className="text-lg font-medium text-[#B59459] uppercase tracking-wider"
+    style={{ fontFamily: "'Lato', sans-serif" }}
+  >
+    Skin Clinic
+  </span>
+</Link>
             <p className="text-stone-600 mb-4 leading-relaxed">
               Advanced dermatology and cosmetology care tailored to your skin's needs. Rejuvenate your glow with our expert treatments.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-emerald-600 shadow-sm hover:bg-emerald-600 hover:text-white transition-colors">
+              <Link href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#B59459] shadow-sm hover:bg-[#B59459] hover:text-white transition-colors">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-emerald-600 shadow-sm hover:bg-emerald-600 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#B59459] shadow-sm hover:bg-[#B59459] hover:text-white transition-colors">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-emerald-600 shadow-sm hover:bg-emerald-600 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#B59459] shadow-sm hover:bg-[#B59459] hover:text-white transition-colors">
                 <Twitter size={20} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -33,11 +47,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-stone-800 mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="#home" className="hover:text-emerald-600 transition-colors">Home</Link></li>
-              <li><Link href="#about" className="hover:text-emerald-600 transition-colors">About Us</Link></li>
-              <li><Link href="#treatments" className="hover:text-emerald-600 transition-colors">Treatments</Link></li>
-              <li><Link href="#doctors" className="hover:text-emerald-600 transition-colors">Our Doctors</Link></li>
-              <li><Link href="#contact" className="hover:text-emerald-600 transition-colors">Contact</Link></li>
+              <li><Link href="#home" className="hover:text-[#B59459] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#B59459] transition-colors">About Us</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Treatments</Link></li>
+              <li><Link href="#doctors" className="hover:text-[#B59459] transition-colors">Our Doctors</Link></li>
+              <li><Link href="#contact" className="hover:text-[#B59459] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -45,11 +59,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-stone-800 mb-6">Treatments</h4>
             <ul className="space-y-3">
-              <li><Link href="#" className="hover:text-emerald-600 transition-colors">Laser Hair Removal</Link></li>
-              <li><Link href="#" className="hover:text-emerald-600 transition-colors">Acne Treatment</Link></li>
-              <li><Link href="#" className="hover:text-emerald-600 transition-colors">Chemical Peels</Link></li>
-              <li><Link href="#" className="hover:text-emerald-600 transition-colors">Anti-Aging</Link></li>
-              <li><Link href="#" className="hover:text-emerald-600 transition-colors">Skin Polishing</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Laser Hair Removal</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Acne Treatment</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Chemical Peels</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Anti-Aging</Link></li>
+              <li><Link href="/treatments" className="hover:text-[#B59459] transition-colors">Skin Polishing</Link></li>
             </ul>
           </div>
 
@@ -58,15 +72,18 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-stone-800 mb-6">Get in Touch</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="text-emerald-600 mt-1 flex-shrink-0" size={20} />
-                <span>123 Wellness Ave, Green Park,<br />New Delhi, India 110016</span>
+                <MapPin className="text-[#B59459] mt-1 flex-shrink-0" size={20} />
+                <span>Avadh complex,<br />vastral, India </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="text-emerald-600 flex-shrink-0" size={20} />
-                <span>+91 98765 43210</span>
+                <Phone className="text-[#B59459] flex-shrink-0" size={20} />
+                <span>+91 9104 77 5531
+
+
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="text-emerald-600 flex-shrink-0" size={20} />
+                <Mail className="text-[#B59459] flex-shrink-0" size={20} />
                 <span>contact@twachaclinic.com</span>
               </li>
             </ul>
